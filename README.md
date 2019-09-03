@@ -33,3 +33,5 @@ Example Response (max 5000 chars):
     </entry>
 </entries>
 ```
+
+Made with ❤️🎉 in the beautiful Rhine Valley 🚵🗻
