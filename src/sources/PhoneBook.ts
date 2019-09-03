@@ -22,15 +22,22 @@ export default class PhoneBook {
 
     public query(request: ISearchRequest): PhoneBookQueryResult {
 
+        // Query all data sources
         const searchResults: ISearchResult[] = new Array<ISearchResult>();
-
         this.dataSources.forEach(x => {
             searchResults.push(...x.retrieve(request));
         });
 
         // Reverse sort
         searchResults.sort(function (a, b) {
-            return (b.rank !== undefined ? b.rank : 0) - (a.rank !== undefined ? a.rank : 0);
+            let rankSort = (b.rank !== undefined ? b.rank : 0) - (a.rank !== undefined ? a.rank : 0);
+            if (rankSort) {
+                // Items are not equal
+                return rankSort;
+            }
+
+            // String comparison for last names according to German language
+            return a.sn.localeCompare(b.sn, 'de', { sensitivity: 'base' });
         });
 
         return new PhoneBookQueryResult(searchResults);

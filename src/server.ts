@@ -1,7 +1,7 @@
 import express = require('express');
 import StaticDataSource from './sources/StaticDataSource';
-import SearchRequest from './infrastructure/SearchRequest';
 import PhoneBook from './sources/PhoneBook';
+import ExpressSearchRequest from './models/ExpressSearchRequest';
 
 // Create a new express application instance
 const listeningPort: number = 3000;
@@ -19,7 +19,7 @@ app.get('/', function (request: any, response: any) {
     response.removeHeader('X-Powered-By');
     response.removeHeader('Date');
 
-    let searchRequest = new SearchRequest(request.query);
+    let searchRequest = new ExpressSearchRequest(request.query);
     let result = phoneBook
         .query(searchRequest)
         .take(5)
