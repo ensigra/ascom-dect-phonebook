@@ -29,7 +29,10 @@ export default class PhoneBookQueryResult {
             .map(x => PhoneBookQueryResult.toXml(x))
             .join('');
 
-        return '<entries>' + results + '</entries>';
+        return '<?xml version="1.0" encoding="UTF-8"?>\n' +
+            '<entries>' +
+            results +
+            '</entries>';
     }
 
     private static toXml(result: ISearchResult): string {

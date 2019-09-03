@@ -17,6 +17,9 @@ export default class StaticDataSource implements IDataSource {
     }
 
     retrieve(request: ISearchRequest): ISearchResult[] {
-        return this.entries.filter(x => x.givenName.toLowerCase().indexOf(request.givenName) > -1);
+        return this.entries.filter(x =>
+            x.givenName.toLowerCase().indexOf(request.givenName) > -1 &&
+            x.sn.toLowerCase().indexOf(request.sn) > -1
+        );
     }
 }

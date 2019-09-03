@@ -15,6 +15,7 @@ http://PROXY_IP_ADDRESS/?user=1234&givenName=&sn=Marra&telephoneNumber=
 
 Example Response (max 5000 chars):
 ```xml
+<?xml version="1.0" encoding="UTF-8"?>
 <entries>
     <entry>
         <givenName>Hans</givenName>
@@ -34,4 +35,24 @@ Example Response (max 5000 chars):
 </entries>
 ```
 
-Made with ❤️🎉 in the beautiful Rhine Valley 🚵🗻
+## Build and Run
+
+Use Visual Studio Code or any other tool which fits your need for development.
+Transpile from TypeScript with the following command:
+
+```
+tsc -p tsconfig.json
+```
+
+Then run the server from <code>dist</code> folder.
+
+```
+node ./dist/server.js
+```
+Or simply run:
+```
+npm start
+```
+
+<hr />
+Made with ❤️🎉 in the beautiful Rhine Valley 🚴🗻🏊.

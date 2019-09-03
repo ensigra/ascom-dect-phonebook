@@ -4,7 +4,7 @@ import PhoneBook from './sources/PhoneBook';
 import ExpressSearchRequest from './models/ExpressSearchRequest';
 
 // Create a new express application instance
-const listeningPort: number = 3000;
+const listeningPort: number = 3001;
 const app: express.Application = express();
 const phoneBook: PhoneBook = new PhoneBook();
 
@@ -14,7 +14,7 @@ phoneBook.registerDataSource(new StaticDataSource());
 
 app.get('/', function (request: any, response: any) {
 
-    response.setHeader('Content-Type', 'text/xml');
+    response.setHeader('Content-Type', 'text/xml; charset=utf-8');
     response.setHeader('Connection', 'close');
     response.removeHeader('X-Powered-By');
     response.removeHeader('Date');
