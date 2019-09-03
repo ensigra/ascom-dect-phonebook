@@ -4,6 +4,7 @@ import SearchRequest from './infrastructure/SearchRequest';
 import PhoneBook from './sources/PhoneBook';
 
 // Create a new express application instance
+const listeningPort: number = 3000;
 const app: express.Application = express();
 const phoneBook: PhoneBook = new PhoneBook();
 
@@ -28,6 +29,6 @@ app.get('/', function (request: any, response: any) {
 
 });
 
-app.listen(3000, function () {
-    console.log('Example app listening on port 3000!');
+app.listen(listeningPort, function () {
+    console.log(`Phonebook proxy listening on port ${listeningPort}`);
 });

@@ -11,9 +11,9 @@ export default class StaticDataSource implements IDataSource {
     }
 
     init(): void {
-        this.entries.push({ givenName: 'Hans', sn: 'Singer', telephoneNumber: '0628895026' });
+        this.entries.push({ givenName: 'Hans', sn: 'Muster', telephoneNumber: '0628895026' });
         this.entries.push({ givenName: 'Fritz', sn: 'Eggenberger', telephoneNumber: '0628895027' });
-        this.entries.push({ givenName: 'Markus', sn: 'Eggenberger', telephoneNumber: '0628895028' });
+        this.entries.push({ givenName: 'Markus', sn: 'Zürcher', telephoneNumber: '0628895028' });
     }
 
     retrieve(request: ISearchRequest): ISearchResult[] {
