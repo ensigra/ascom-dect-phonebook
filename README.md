@@ -5,7 +5,7 @@ This proxy can be used to allow IP DECT phonebook lookups using multiple data so
 allow private contact lookup.
 
 ## Current Status
-This project is under development. Custom extensions (Active Directory, Office 365, [tel.search.ch](http://tel.search.ch)) are available on request through ensigra GmbH.
+This project is under development. Custom extensions (Active Directory, Office 365, Microsoft Graph, [tel.search.ch](http://tel.search.ch)) are available on request through ensigra GmbH.
 
 ## Example Request and Response
 Example Request URL:

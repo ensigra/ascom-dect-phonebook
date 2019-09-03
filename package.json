@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "tsc && node ./dist/server.js"
   },
-  "author": "Michael Singer, hello@ensigra.com, ensigra GmbH",
+  "author": "ensigra GmbH, hello@ensigra.com",
   "dependencies": {
     "express": "^4.17.1",
     "xml-escape": "^1.1.0"
@@ -15,7 +15,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/ensigra/ospelt-phonebook-sync.git"
+    "url": "https://github.com/ensigra/ascom-dect-phonebook.git"
   },
   "devDependencies": {
     "@types/express": "^4.17.1",
